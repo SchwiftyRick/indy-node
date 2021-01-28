@@ -1,22 +1,12 @@
-git clone https://github.com/facebook/rocksdb.git /tmp/rocksdb
-
-cd /tmp/rocksdb
-
-git checkout v6.14.6
-
-sed -i 's/-m rocksdb@fb.com/-m "Hyperledger <hyperledger-indy@lists.hyperledger.org>"/g' ./build_tools/make_package.sh
-
-PORTABLE=1 EXTRA_CFLAGS="-fPIC" EXTRA_CXXFLAGS="-fPIC" make static_lib
-PORTABLE=1 EXTRA_CFLAGS="-fPIC" EXTRA_CXXFLAGS="-fPIC" DEBUG_LEVEL=0 make static_lib package
-
-
 dpkg -i /plenum-deb/*
-create_dir.sh
+./create_dir.sh
 dpkg -i /indy-deb/*
 apt-get install -f
 
-init_indy_node test1234 0.0.0.0 9701 0.0.0.0 9702 rknode01seed_0000000000000000000
+init_indy_node apnode01 0.0.0.0 9701 0.0.0.0 9702 apnode01seed_0000000000000000000
 
-start_indy_node test1234 0.0.0.0 9701 0.0.0.0 9702
+start_indy_node apnode01 0.0.0.0 9701 0.0.0.0 9702
 
 python3 -m pytest -l -m ${{ matrix.module }} -vv --junitxml=test-result-common-${{ matrix.module }}.xml indy_common
+
+docker cp "$(docker inspect --format="{{.Id}}" fervent_sanderson):/plenum-deb" ./deb-files

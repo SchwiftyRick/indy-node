@@ -1,0 +1,5 @@
+{"reqSignature":{},"txn":{"data":{"alias":"trusteeAR","dest":"Gz69obXTJv2mf1bJ52nccm","role":"0","verkey":"~4icJHzhWuwtezFAYyZccXy"},"metadata":{},"type":"1"},"txnMetadata":{"seqNo":1},"ver":"1"}
+{"reqSignature":{},"txn":{"data":{"dest":"9qDLH2PaALwzF59JDQ7P86","role":"2","verkey":"~WzQ7qPY29RWo4e8M7j5Tv2"},"metadata":{"from":"Gz69obXTJv2mf1bJ52nccm\""},"type":"1"},"txnMetadata":{"seqNo":2},"ver":"1"}
+{"reqSignature":{},"txn":{"data":{"dest":"ESCSAb5mHh4mtMVTnBHmmz","role":"2","verkey":"~RgaW3PCCVz4vLh43KLnQEL"},"metadata":{"from":"Gz69obXTJv2mf1bJ52nccm\""},"type":"1"},"txnMetadata":{"seqNo":3},"ver":"1"}
+{"reqSignature":{},"txn":{"data":{"dest":"UwmaYF2Z9JdsQC2P7yLZSc","role":"2","verkey":"~5MARDVGW44kLNp86AJ3UAC"},"metadata":{"from":"Gz69obXTJv2mf1bJ52nccm\""},"type":"1"},"txnMetadata":{"seqNo":4},"ver":"1"}
+{"reqSignature":{},"txn":{"data":{"dest":"TXyAicMmLyrT9DhVEu4hVS","role":"2","verkey":"~ASowEem1VWRR7GKSmVYo8d"},"metadata":{"from":"Gz69obXTJv2mf1bJ52nccm\""},"type":"1"},"txnMetadata":{"seqNo":5},"ver":"1"}

@@ -56,4 +56,13 @@ RUN useradd -ms /bin/bash -u $uid indy
 
 WORKDIR /root
 
-ADD . /root
+ADD deb-files /root/deb-files/
+ADD create_dir.sh /root/create_dir.sh
+ADD domain_transactions_genesis /var/lib/indy/ARINDYNET/domain_transactions_genesis
+ADD pool_transactions_genesis /var/lib/indy/ARINDYNET/pool_transactions_genesis
+
+RUN chown indy:indy /var/lib/indy/ARINDYNET/pool_transactions_genesis
+RUN chown indy:indy /var/lib/indy/ARINDYNET/domain_transactions_genesis
+RUN dpkg -i /root/deb-files/plenum-deb/* &&  ./create_dir.sh && dpkg -i /root/deb-files/node-deb/*
+
+EXPOSE 9701 9702 
