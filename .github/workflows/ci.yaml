@@ -6,7 +6,7 @@ jobs:
     name: Build Indy Common
     runs-on: ubuntu-20.04
     #TODO: move this to hyperledger?
-    container: ubuntu:20.04
+    container: schwiftyrick/ubuntu20-indy-wip:1
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
     name: Build Indy Node
     runs-on: ubuntu-20.04
     #TODO: move this to hyperledger?
-    container: ubuntu:20.04
+    container: schwiftyrick/ubuntu20-indy-wip:1
     strategy:
       matrix:
         module: [ upgrade, auth_rule, anon_creds, api, attrib_txn, claim_def, did, endorser, node_control_utils,
@@ -57,7 +57,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-20.04
     #TODO: move this to hyperledger?
-    container: ubuntu:20.04
+    container: schwiftyrick/ubuntu20-indy-wip:1
     steps:
       - name: Check out code
         uses: actions/checkout@v2
