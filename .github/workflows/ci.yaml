@@ -6,7 +6,7 @@ jobs:
     name: Build Indy Common
     runs-on: ubuntu-20.04
     #TODO: move this to hyperledger?
-    container: schwiftyrick/ubuntu20-indy-wip:1
+    container: schwiftyrick/ubuntu18.04:1
     steps:
       - name: Check out code
         uses: actions/checkout@v2
